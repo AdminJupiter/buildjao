@@ -41,6 +41,39 @@
       .services h2 {
         margin-bottom: 50px;
       }
+      .hero {
+    position: relative;
+    height: 100vh; /* Full height of the viewport */
+    background: linear-gradient(to right, rgba(30, 60, 114, 0.7), rgba(42, 82, 152, 0.7)), url('./assets/bg.png');
+    background-size: cover; /* Ensures the image covers the whole section */
+    background-position: 60% 25%; /* Center the image */
+    color: white; /* Text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Optional overlay, adjust opacity as needed */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+.hero h1, .hero p {
+    margin-bottom: 20px;
+}
+
     </style>
   
 </head>
@@ -65,15 +98,16 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="overlay"></div>
-        <div class="container hero-content">
-            <h1 class="display-3 fw-bold">Hi, I'm a Freelance Developer</h1>
-            <p class="lead">Turning your ideas into fast, modern websites.</p>
-            <a href="#contact" class="btn btn-primary btn-lg">Hire Me</a>
-        </div>
-    </section>
+  <!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="overlay"></div>
+  <div class="container hero-content">
+      <h1 class="display-3 fw-bold">Hi, I'm a Freelance Developer</h1>
+      <p class="lead">Turning your ideas into fast, modern websites.</p>
+      <a href="#contact" class="btn btn-primary btn-lg">Hire Me</a>
+  </div>
+</section>
+
 
     <!-- About Me Section -->
     <section id="about" class="about">
