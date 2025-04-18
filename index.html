@@ -311,55 +311,7 @@
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-<script type="text/javascript">
-  (function(){
-      emailjs.init("L6P_mh9s2cdlwo8w_");  
-  })();
-
-  function sendEmail(event) {
-      event.preventDefault();
-
-    
-      const name = document.getElementById('user_name').value;
-      const email = document.getElementById('user_email').value;
-      const message = document.getElementById('message').value;
-
-      // Send email using EmailJS
-      emailjs.send("service_q61c9s9", "template_u5mp2ac", {
-          user_name: name,
-          user_email: email,
-          message: message
-      })
-      .then(function(response) {
-          
-          const successMessage = document.getElementById("sucer");
-          successMessage.textContent = "Your message was sent successfully! 🎉";
-          successMessage.classList.remove('d-none');
-          successMessage.classList.add('alert-success', 'alert-dismissible', 'fade', 'show');
-          
-          document.getElementById("contact-form").reset();
-         
-          setTimeout(() => {
-              successMessage.classList.remove('fade', 'show');
-              successMessage.classList.add('d-none');
-          }, 5000);
-      })
-      .catch(function(error) {
-        
-          const failureMessage = document.getElementById("sucer");
-          failureMessage.textContent = "Failed to send the message. Please try again. 😞";
-          failureMessage.classList.remove('d-none');
-          failureMessage.classList.add('alert-danger', 'alert-dismissible', 'fade', 'show');
-          
-          
-          setTimeout(() => {
-              failureMessage.classList.remove('fade', 'show');
-              failureMessage.classList.add('d-none');
-          }, 5000);
-      });
-  }
-</script>
-
+<script type="text/javascript">(function(){emailjs.init("L6P_mh9s2cdlwo8w_")})();function sendEmail(event){event.preventDefault();const name=document.getElementById('user_name').value;const email=document.getElementById('user_email').value;const message=document.getElementById('message').value;emailjs.send("service_q61c9s9","template_u5mp2ac",{user_name:name,user_email:email,message:message}).then(function(response){const successMessage=document.getElementById("sucer");successMessage.textContent="Your message was sent successfully! 🎉";successMessage.classList.remove('d-none');successMessage.classList.add('alert-success','alert-dismissible','fade','show');document.getElementById("contact-form").reset();setTimeout(()=>{successMessage.classList.remove('fade','show');successMessage.classList.add('d-none')},5000)}).catch(function(error){const failureMessage=document.getElementById("sucer");failureMessage.textContent="Failed to send the message. Please try again. 😞";failureMessage.classList.remove('d-none');failureMessage.classList.add('alert-danger','alert-dismissible','fade','show');setTimeout(()=>{failureMessage.classList.remove('fade','show');failureMessage.classList.add('d-none')},5000)})}</script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
