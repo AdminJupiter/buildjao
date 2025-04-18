@@ -91,6 +91,41 @@
     margin-bottom: 20px;
 }
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.icon-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #6c49ca;
+}
+
+.icon-link:hover {
+  transform: translateY(-5px);
+  color: #6b49cabd;
+}
+
+.icon-label {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.disabled-icon {
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+
+
     </style>
   
 </head>
@@ -256,6 +291,20 @@
 
           <button type="submit" class="btn btn-primary btn-lg d-grid">Send Message</button>
       </form>
+        <div class="social-icons text-center mt-5 mb-4">
+     
+        <a href="https://facebook.com/yourprofile" target="_blank" class="icon-link me-4">
+          <i class="fab fa-facebook fa-2x"></i>
+          <span class="icon-label">Build With Jao</span>
+        </a>
+      
+      
+        <span class="icon-link disabled-icon">
+          <i class="fab fa-instagram fa-2x"></i>
+          <span class="icon-label text-muted">Coming Soon</span>
+        </span>
+      </div>
+      
   </div>
 </section>
 
